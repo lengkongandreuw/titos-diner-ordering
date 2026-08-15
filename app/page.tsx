@@ -5,18 +5,18 @@ import { useMemo, useState } from "react";
 type MenuItem = { id: number; name: string; description: string; price: number; category: string; image: string; tag?: string };
 const categories = ["Favorites", "Breakfast", "Burgers", "Sandwiches", "Dinner", "Drinks"];
 const menu: MenuItem[] = [
-  { id: 1, name: "Big Breakfast", description: "Three eggs, two pancakes, home fries, and your choice of bacon, sausage, or ham.", price: 11.29, category: "Breakfast", image: "/food/dish-4.jpg", tag: "House favorite" },
-  { id: 2, name: "Chicken & Waffles", description: "Crispy fried chicken and a golden Belgian waffle topped with white gravy.", price: 11.99, category: "Breakfast", image: "/food/chicken-waffles.jpg", tag: "Tito's pick" },
-  { id: 3, name: "Stuffed French Toast", description: "Mixed fruit with custard or Nutella filling, finished with pecans.", price: 12.99, category: "Breakfast", image: "/food/french-toast.jpg" },
-  { id: 4, name: "Tito’s Burger", description: "Fresh ground beef, mozzarella, red pepper pesto, and chipotle mayo.", price: 12.99, category: "Burgers", image: "/food/dish-2.jpg", tag: "Signature" },
-  { id: 5, name: "City Burger", description: "A half-pound burger with Swiss cheese and caramelized onions. Fries included.", price: 11.99, category: "Burgers", image: "/food/dish-2.jpg" },
-  { id: 6, name: "Classic Gyro", description: "Slow-roasted beef and lamb, cold tzatziki, lettuce, tomato, and onion in warm pita.", price: 9.99, category: "Sandwiches", image: "/food/dish-2.jpg", tag: "Messy. Worth it." },
-  { id: 7, name: "Reuben", description: "Toasted rye, corned beef or turkey, sauerkraut, Thousand Island, and Swiss.", price: 11.99, category: "Sandwiches", image: "/food/dish-2.jpg" },
-  { id: 8, name: "Herb Grilled Salmon", description: "Atlantic salmon with blended herbs, vegetables, and rice pilaf.", price: 19.99, category: "Dinner", image: "/food/dish-3.jpg", tag: "Heart healthy" },
-  { id: 9, name: "Liver & Onions", description: "Grilled beef liver, onions, roasted tomato sauce, mashed potatoes, and vegetables.", price: 12.99, category: "Dinner", image: "/food/dish-1.jpg" },
-  { id: 10, name: "Turkey Dinner", description: "Slow-roasted turkey, mashed potatoes, vegetables, stuffing, cranberry sauce, and gravy.", price: 15.99, category: "Dinner", image: "/food/dish-5.jpg" },
-  { id: 11, name: "Fresh Brewed Coffee", description: "Hot, fresh, and ready for a refill. Regular or decaf.", price: 3.29, category: "Drinks", image: "/food/dish-4.jpg" },
-  { id: 12, name: "Hand-Dipped Shake", description: "Made with Hershey’s Ice Cream. Vanilla, chocolate, strawberry, banana, or peach.", price: 6.99, category: "Drinks", image: "/food/french-toast.jpg" },
+  { id: 1, name: "Big Breakfast", description: "Three eggs, two pancakes, home fries, and your choice of bacon, sausage, or ham.", price: 11.29, category: "Breakfast", image: "./food/dish-4.jpg", tag: "House favorite" },
+  { id: 2, name: "Chicken & Waffles", description: "Crispy fried chicken and a golden Belgian waffle topped with white gravy.", price: 11.99, category: "Breakfast", image: "./food/chicken-waffles.jpg", tag: "Tito's pick" },
+  { id: 3, name: "Stuffed French Toast", description: "Mixed fruit with custard or Nutella filling, finished with pecans.", price: 12.99, category: "Breakfast", image: "./food/french-toast.jpg" },
+  { id: 4, name: "Tito’s Burger", description: "Fresh ground beef, mozzarella, red pepper pesto, and chipotle mayo.", price: 12.99, category: "Burgers", image: "./food/dish-2.jpg", tag: "Signature" },
+  { id: 5, name: "City Burger", description: "A half-pound burger with Swiss cheese and caramelized onions. Fries included.", price: 11.99, category: "Burgers", image: "./food/dish-2.jpg" },
+  { id: 6, name: "Classic Gyro", description: "Slow-roasted beef and lamb, cold tzatziki, lettuce, tomato, and onion in warm pita.", price: 9.99, category: "Sandwiches", image: "./food/dish-2.jpg", tag: "Messy. Worth it." },
+  { id: 7, name: "Reuben", description: "Toasted rye, corned beef or turkey, sauerkraut, Thousand Island, and Swiss.", price: 11.99, category: "Sandwiches", image: "./food/dish-2.jpg" },
+  { id: 8, name: "Herb Grilled Salmon", description: "Atlantic salmon with blended herbs, vegetables, and rice pilaf.", price: 19.99, category: "Dinner", image: "./food/dish-3.jpg", tag: "Heart healthy" },
+  { id: 9, name: "Liver & Onions", description: "Grilled beef liver, onions, roasted tomato sauce, mashed potatoes, and vegetables.", price: 12.99, category: "Dinner", image: "./food/dish-1.jpg" },
+  { id: 10, name: "Turkey Dinner", description: "Slow-roasted turkey, mashed potatoes, vegetables, stuffing, cranberry sauce, and gravy.", price: 15.99, category: "Dinner", image: "./food/dish-5.jpg" },
+  { id: 11, name: "Fresh Brewed Coffee", description: "Hot, fresh, and ready for a refill. Regular or decaf.", price: 3.29, category: "Drinks", image: "./food/dish-4.jpg" },
+  { id: 12, name: "Hand-Dipped Shake", description: "Made with Hershey’s Ice Cream. Vanilla, chocolate, strawberry, banana, or peach.", price: 6.99, category: "Drinks", image: "./food/french-toast.jpg" },
 ];
 const money = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
 
@@ -43,7 +43,7 @@ export default function Home() {
 
   return <main>
     <header className="topbar">
-      <a className="brand" href="#top" aria-label="Tito's Diner home"><img src="/titos-logo.png" alt="Tito's Diner" /></a>
+      <a className="brand" href="#top" aria-label="Tito's Diner home"><img src="./titos-logo.png" alt="Tito's Diner" /></a>
       <div className="location"><span className="eyebrow">ORDERING FROM</span><strong>Fredericksburg, VA</strong><span className="open-dot">Open until 10 PM</span></div>
       <nav aria-label="Main navigation"><a href="#menu">Menu</a><a href="#about">Our diner</a></nav>
       <button className="cart-button" onClick={() => setCartOpen(true)} aria-label={`Open cart with ${cartCount} items`}><span aria-hidden="true">▰</span> Your order <b>{cartCount}</b></button>
@@ -69,7 +69,7 @@ export default function Home() {
     </section>
 
     <section className="story" id="about"><div><span className="kicker">THIS IS TITO'S</span><h2>FRESH. LOCAL.<br />SERIOUSLY SATISFYING.</h2></div><p>We serve hearty American classics alongside Tito’s Mediterranean favorites, made with fresh ingredients whenever we can.</p><a href="tel:5405483406">CALL THE DINER <span>540.548.3406</span></a></section>
-    <footer><img src="/titos-logo.png" alt="Tito's Diner" /><p>1695 Carl D Silver Pkwy<br />Fredericksburg, VA 22401</p><p><strong>MON–SUN</strong><br />7:00 AM – 10:00 PM</p><p className="footer-line">REAL FOOD. BOLD FLAVOR. <span>COME HUNGRY.</span></p></footer>
+    <footer><img src="./titos-logo.png" alt="Tito's Diner" /><p>1695 Carl D Silver Pkwy<br />Fredericksburg, VA 22401</p><p><strong>MON–SUN</strong><br />7:00 AM – 10:00 PM</p><p className="footer-line">REAL FOOD. BOLD FLAVOR. <span>COME HUNGRY.</span></p></footer>
 
     {cartOpen && <div className="cart-layer" role="dialog" aria-modal="true" aria-label="Your order"><button className="scrim" onClick={() => setCartOpen(false)} aria-label="Close cart" /><aside className="cart-drawer"><div className="cart-head"><div><span className="kicker dark">{orderType.toUpperCase()}</span><h2>YOUR ORDER.</h2></div><button className="close" onClick={() => setCartOpen(false)} aria-label="Close cart">×</button></div><div className="fulfillment"><span>⌂</span><div><small>{orderType} from</small><strong>1695 Carl D Silver Pkwy</strong></div><button>Change</button></div><div className="cart-items">{cartItems.length ? cartItems.map((item) => <div className="cart-item" key={item.id}><img src={item.image} alt="" /><div><strong>{item.name}</strong><span>{money.format(item.price * item.qty)}</span></div><div className="qty"><button onClick={() => changeQty(item.id, -1)}>−</button><span>{item.qty}</span><button onClick={() => changeQty(item.id, 1)}>+</button></div></div>) : <div className="cart-empty"><strong>Your tray is empty.</strong><span>The fries miss you already.</span></div>}</div><div className="cart-total"><span>Subtotal</span><strong>{money.format(subtotal)}</strong></div><button className="checkout" disabled={!cartItems.length}>CHECKOUT <span>{money.format(subtotal)}</span></button><small className="tax-note">Taxes and fees calculated at checkout.</small></aside></div>}
   </main>;
