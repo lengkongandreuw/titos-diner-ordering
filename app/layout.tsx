@@ -5,6 +5,18 @@ export const metadata: Metadata = {
   title: "Order Online | Tito's Diner",
   description: "Order classic American diner favorites for pickup or delivery from Tito's Diner in Fredericksburg, Virginia.",
   icons: { icon: "/titos-logo.png" },
+  openGraph: {
+    title: "Come Hungry | Tito's Diner",
+    description: "Build your Tito's order with breakfast, diner classics, Mediterranean favorites, and custom sides.",
+    type: "website",
+    images: ["https://lengkongandreuw.github.io/titos-diner-ordering/og.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Come Hungry | Tito's Diner",
+    description: "Order Tito's Diner favorites online.",
+    images: ["https://lengkongandreuw.github.io/titos-diner-ordering/og.png"],
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
