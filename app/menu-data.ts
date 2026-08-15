@@ -13,17 +13,17 @@ export type MenuItem = {
 };
 
 const img = {
-  breakfast: "./titosmenu/hero_pancakes.jpg",
-  pancake: "./titosmenu/menu_pancakes.jpg",
-  waffle: "./titosmenu/menu_belgian_waffle.jpg",
-  omelette: "./titosmenu/menu_omelette.jpg",
-  burger: "./titosmenu/menu_bacon_burger.jpg",
-  club: "./titosmenu/menu_club_sandwich.jpg",
-  steak: "./titosmenu/menu_fried_steak.jpg",
-  liver: "./titosmenu/liver and onions.jpg",
-  shake: "./titosmenu/menu_milkshake.jpg",
-  pie: "./titosmenu/menu_apple_pie.jpg",
-  seafood: "./titosmenu/titos dinner 3 .jpg",
+  breakfast: "./titosmenu/hero_pancakes.webp",
+  pancake: "./titosmenu/menu_pancakes.webp",
+  waffle: "./titosmenu/menu_belgian_waffle.webp",
+  omelette: "./titosmenu/menu_omelette.webp",
+  burger: "./titosmenu/menu_bacon_burger.webp",
+  club: "./titosmenu/menu_club_sandwich.webp",
+  steak: "./titosmenu/menu_fried_steak.webp",
+  liver: "./titosmenu/liver and onions.webp",
+  shake: "./titosmenu/menu_milkshake.webp",
+  pie: "./titosmenu/menu_apple_pie.webp",
+  seafood: "./titosmenu/titos dinner 3 .webp",
 };
 
 export const categories = ["Favorites", "Breakfast", "Griddle", "Appetizers", "Salads", "Sandwiches", "Burgers", "Mediterranean", "Pasta", "Dinner", "Sides", "Drinks & Sweets"];

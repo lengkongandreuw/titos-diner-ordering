@@ -9,13 +9,13 @@ export const metadata: Metadata = {
     title: "Come Hungry | Tito's Diner",
     description: "Build your Tito's order with breakfast, diner classics, Mediterranean favorites, and custom sides.",
     type: "website",
-    images: ["https://lengkongandreuw.github.io/titos-diner-ordering/og.png"],
+    images: ["https://lengkongandreuw.github.io/titos-diner-ordering/og.webp"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Come Hungry | Tito's Diner",
     description: "Order Tito's Diner favorites online.",
-    images: ["https://lengkongandreuw.github.io/titos-diner-ordering/og.png"],
+    images: ["https://lengkongandreuw.github.io/titos-diner-ordering/og.webp"],
   },
 };
 

@@ -86,7 +86,7 @@ export default function Home() {
       {mobileMenu && <div className="mobile-popover"><button onClick={() => { goMenu(); setMobileMenu(false); }}>Browse menu</button><a href="#about" onClick={() => setMobileMenu(false)}>Our diner</a><a href="tel:5405483406">Call Tito’s</a></div>}
     </header>
 
-    <section className="hero" id="top" style={{ backgroundImage:'url("./icon/herobackground1.png")' }}>
+    <section className="hero" id="top" style={{ backgroundImage:'url("./icon/herobackground1.webp")' }}>
       <div className="hero-copy">
         <span className="kicker">CLASSIC AMERICAN DINER · SINCE 2009</span>
         <h1>COME<br />HUNGRY.</h1>

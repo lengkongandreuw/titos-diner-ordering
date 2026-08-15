@@ -10,7 +10,7 @@ test("GitHub Pages build contains the ordering application", async () => {
   assert.match(html, /titos-diner-ordering\/assets\/index-/);
   assert.match(html, /og:image/);
   await access(new URL("../dist-pages/icon/homeactive.png", import.meta.url));
-  await access(new URL("../dist-pages/titosmenu/menu_bacon_burger.jpg", import.meta.url));
+  await access(new URL("../dist-pages/titosmenu/menu_bacon_burger.webp", import.meta.url));
 });
 
 test("menu source includes the official substitution prices", async () => {
@@ -22,7 +22,7 @@ test("menu source includes the official substitution prices", async () => {
   assert.match(source, /Egg whites",price:\.99/);
   assert.match(source, /Grilled chicken breast",price:3\.99/);
   assert.match(source, /Malted",price:\.79/);
-  await access(new URL("../public/og.png", import.meta.url));
+  await access(new URL("../public/og.webp", import.meta.url));
 });
 
 test("production worker renders Tito's ordering page", async () => {
